@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vecan AI | Inteligencia de Datos para el Próximo Nivel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #00f2ff; /* Cyan eléctrico */
+            --secondary: #7000ff; /* Púrpura IA */
+            --bg-dark: #050505;
+            --card-bg: #111111;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span { color: var(--primary); }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #111122 0%, #050505 70%);
+        }
+
+        .badge {
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: -3px;
+        }
+
+        h1 span {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .cta-group { display: flex; gap: 15px; }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary { background: var(--primary); color: #000; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 242, 255, 0.3); }
+
+        .btn-secondary { border: 1px solid #333; color: white; }
+        .btn-secondary:hover { background: #111; }
+
+        /* --- SERVICES --- */
+        .section { padding: 100px 20px; max-width: 1200px; margin: auto; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover { border-color: var(--primary); transform: translateY(-10px); }
+
+        .card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card h3 { margin-bottom: 15px; font-size: 1.4rem; }
+        .card p { color: var(--text-dim); font-size: 0.95rem; line-height: 1.7; }
+
+        /* --- CONTACT --- */
+        .contact-box {
+            background: linear-gradient(145deg, #0a0a0a, #151515);
+            padding: 60px;
+            border-radius: 30px;
+            text-align: center;
+            border: 1px solid #222;
+        }
+
+        .social-links { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+        .social-links a:hover { color: var(--primary); }
+
+        footer {
+            padding: 50px;
+            text-align: center;
+            color: #444;
+            font-size: 0.8rem;
+            border-top: 1px solid #111;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">VECAN<span>AI</span></div>
+        <div class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <a href="https://instagram.com/vecan.ai" target="_blank">Instagram</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="badge">Análisis de Datos & ML Startup</div>
+        <h1>Powering <span>Decisions</span><br>with Intelligence.</h1>
+        <p>En Vecan AI ayudamos a startups y empresas a desbloquear el potencial oculto de sus datos con modelos predictivos y dashboards de alta precisión.</p>
+        
+        <div class="cta-group">
+            <a href="mailto:contacto.vecan@gmail.com" class="btn btn-primary">Hablemos de tus datos</a>
+            <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
+        </div>
+    </section>
+
+    <section class="section" id="servicios">
+        <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 10px;">Lo que hacemos.</h2>
+        <p style="text-align: center; color: var(--text-dim); margin-bottom: 50px;">Soluciones técnicas para problemas de negocio reales.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <i class="fa-solid fa-chart-pie"></i>
+                <h3>Business Intelligence</h3>
+                <p>No solo gráficos. Creamos ecosistemas de visualización que responden preguntas críticas sobre tu operación en tiempo real.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-microchip"></i>
+                <h3>Machine Learning</h3>
+                <p>Modelos de propensión, predicción de demanda y segmentación de clientes entrenados con tus propios datos.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Data Pipeline</h3>
+                <p>Limpieza y estructuración de bases de datos para que la información fluya sin errores desde la fuente hasta tu mesa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contacto">
+        <div class="contact-box">
+            <h2>¿Listo para empezar?</h2>
+            <p style="color: var(--text-dim); margin: 20px 0;">Estamos listos para transformar tu data en retorno de inversión.</p>
+            <h3 style="color: var(--primary); font-size: 1.5rem;">contacto.vecan@gmail.com</h3>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/vecan.ai" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:contacto.vecan@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VECAN AI. Desarrollado con tecnología de punta.</p>
+    </footer>
+
+</body>
+</html>
